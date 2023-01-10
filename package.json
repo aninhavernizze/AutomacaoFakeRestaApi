@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open":"cypress open"
+    "cypress:open": "cypress open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^6.9.1"
+    "cypress": "^6.9.1",
+    "@bahmutov/cy-api": "^1.4.3",
+    "faker-br": "^0.4.1"
   }
 }
