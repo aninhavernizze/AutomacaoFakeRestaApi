@@ -27,3 +27,12 @@ Cypress.Commands.add('put', (path, payload) =>{
         failOnStatusCode: false
     })
 })
+
+Cypress.Commands.add('delete', (path, payload) =>{
+    cy.api({
+        method: 'DELETE',
+        url: path,
+        body: payload,
+        failOnStatusCode: false
+    })
+})

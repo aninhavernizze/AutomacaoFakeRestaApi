@@ -10,8 +10,8 @@ describe ('Cenarios do endpoint POST Activies', () => {
         payloadActivies.title = "";
         payloadActivies.dueDate = "";
         payloadActivies.completed = 0;
-        cy.post(endpointPaths.v1.urlActivies, payloadActivies).should((responsePostActivies) => {
-          cy.validarResponsePostFalhaActivies(responsePostActivies.body);         
+        cy.post(endpointPaths.v1.urlActivies, payloadActivies).should((responseActivies) => {
+          cy.validarResponseFalhaActivies(responseActivies.body);         
         }) 
       })     
     })

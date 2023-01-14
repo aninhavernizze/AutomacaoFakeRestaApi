@@ -1,32 +1,32 @@
 /// <reference types="Cypress" />
 
-Cypress.Commands.add('validarResponsePostActivies', (responsePostActivies) =>{
+Cypress.Commands.add('validarResponseActivies', (responseActivies) =>{
     // Validações do schema em cenario de sucesso
-    expect(responsePostActivies).to.be.an("object"); 
+    expect(responseActivies).to.be.an("object"); 
     expect("O id é: 'number'")
-        .to.eq("O id é: '" + typeof(responsePostActivies.id) +"'");
+        .to.eq("O id é: '" + typeof(responseActivies.id) +"'");
     expect("O titulo é: 'string'")
-        .to.eq("O titulo é: '" + typeof(responsePostActivies.title) +"'");
+        .to.eq("O titulo é: '" + typeof(responseActivies.title) +"'");
     expect("A data é: 'string'")
-        .to.eq("A data é: '" + typeof(responsePostActivies.dueDate) +"'");
+        .to.eq("A data é: '" + typeof(responseActivies.dueDate) +"'");
     expect("O concluído é: 'boolean'")
-        .to.eq("O concluído é: '" + typeof(responsePostActivies.completed) +"'");
+        .to.eq("O concluído é: '" + typeof(responseActivies.completed) +"'");
 })
 
-Cypress.Commands.add('validarResponsePostFalhaActivies', (responsePostActivies) =>{
+Cypress.Commands.add('validarResponseFalhaActivies', (responsetActivies) =>{
     // Validações do schema em cenario de falha
-    expect(`statusCode: ${responsePostActivies.status}`)
+    expect(`statusCode: ${responsetActivies.status}`)
         .to.eq(`statusCode: 400`);
     expect("O type é: 'string'")
-        .to.eq("O type é: '" + typeof(responsePostActivies.type) +"'");
+        .to.eq("O type é: '" + typeof(responsetActivies.type) +"'");
     expect("O title é: 'string'")
-        .to.eq("O title é: '" + typeof(responsePostActivies.title) +"'");
+        .to.eq("O title é: '" + typeof(responsetActivies.title) +"'");
     expect("O status é: 'number'")
-        .to.eq("O status é: '" + typeof(responsePostActivies.status) +"'");
+        .to.eq("O status é: '" + typeof(responsetActivies.status) +"'");
     expect("O traceId é: 'string'")
-        .to.eq("O traceId é: '" + typeof(responsePostActivies.traceId) +"'");
+        .to.eq("O traceId é: '" + typeof(responsetActivies.traceId) +"'");
     expect("O errors é: 'object'")
-        .to.eq("O errors é: '" + typeof(responsePostActivies.errors) +"'"); 
+        .to.eq("O errors é: '" + typeof(responsetActivies.errors) +"'"); 
 })
 
 Cypress.Commands.add('validarResponseGetActivies', (responseGetActivies) =>{
