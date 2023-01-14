@@ -3,8 +3,7 @@
   "video": false,
   "endpointPaths":{
     "v1": {
-      "postActivies": "v1/Activities",
-      "getActiviesId": "v1/Activities"
+      "urlActivies": "v1/Activities"
     }
   }
 }
