@@ -4,9 +4,9 @@ const { endpointPaths } = require("../../../cypress.json");
 
 describe ('Cenarios do endpoint GET Activies', () => {  
   context('Cenarios de falha', () => {  
-    it('Buscar informações passando id inválido', () => { 
+    it('Validar erro quando informado id inválido', () => { 
       let activiesId = 10000;
-      cy.get(`${endpointPaths.v1.getActiviesId}/${activiesId}`).should((responseGet) => {     
+      cy.get(`${endpointPaths.v1.urlActivies}/${activiesId}`).should((responseGet) => {     
         cy.validarResponseGetFalhaActivies(responseGet.body);   
       })     
     })

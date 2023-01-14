@@ -18,3 +18,12 @@ Cypress.Commands.add('post', (path, payload) => {
         failOnStatusCode: false
     })
 })
+
+Cypress.Commands.add('put', (path, payload) =>{
+    cy.api({
+        method: 'PUT',
+        url: path,
+        body: payload,
+        failOnStatusCode: false
+    })
+})

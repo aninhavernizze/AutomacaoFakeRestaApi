@@ -44,8 +44,7 @@ Cypress.Commands.add('validarResponseGetActivies', (responseGetActivies) =>{
 })
 
 Cypress.Commands.add('validarResponseGetActiviesId', (responseGetActivies) =>{
-    // Validações do schema em cenario de sucesso
-  
+    // Validações do schema em cenario de sucesso  
     expect("O id é: 'number'")
         .to.eq("O id é: '" + typeof(responseGetActivies.id) +"'");
     expect("O titulo é: 'string'")
@@ -68,4 +67,4 @@ Cypress.Commands.add('validarResponseGetFalhaActivies', (responseGet) =>{
         .to.eq("O status é: '" + typeof(responseGet.status) +"'");
     expect("O traceId é: 'string'")
         .to.eq("O traceId é: '" + typeof(responseGet.traceId) +"'");
-    })
+})
