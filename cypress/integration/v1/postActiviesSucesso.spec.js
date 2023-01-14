@@ -12,8 +12,8 @@ describe ('Cenarios do endpoint POST Activies', () => {
         payloadActivies.title = faker.name.firstName();
         payloadActivies.dueDate = dataISODataHoraTmz;
         payloadActivies.completed = true;
-          cy.post(endpointPaths.v1.urlActivies, payloadActivies).should((responsePostActivies) => {
-            cy.validarResponsePostActivies(responsePostActivies.body);         
+          cy.post(endpointPaths.v1.urlActivies, payloadActivies).should((responseActivies) => {
+            cy.validarResponseActivies(responseActivies.body);         
         }) 
       })     
     })
@@ -24,8 +24,8 @@ describe ('Cenarios do endpoint POST Activies', () => {
         payloadActivies.title = faker.name.firstName();
         payloadActivies.dueDate = dataISODataHoraTmz;
         payloadActivies.completed = false;
-          cy.post(endpointPaths.v1.urlActivies, payloadActivies).should((responsePostActivies) => {
-            cy.validarResponsePostActivies(responsePostActivies.body);         
+          cy.post(endpointPaths.v1.urlActivies, payloadActivies).should((responseActivies) => {
+            cy.validarResponseActivies(responseActivies.body);         
         }) 
       })     
     })

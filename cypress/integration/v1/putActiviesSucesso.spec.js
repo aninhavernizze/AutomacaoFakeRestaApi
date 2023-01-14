@@ -15,8 +15,8 @@ describe ('Cenarios do endpoint PUT Activies', () => {
         payloadActivies.title = faker.name.firstName();
         payloadActivies.dueDate = dataISODataHoraTmz;
         payloadActivies.completed = true;           
-          cy.put(`${endpointPaths.v1.urlActivies}/${activiesId}`, payloadActivies).should((responsePostActivies) => {
-            cy.validarResponsePostActivies(responsePostActivies.body); 
+          cy.put(`${endpointPaths.v1.urlActivies}/${activiesId}`, payloadActivies).should((responseActivies) => {
+            cy.validarResponseActivies(responseActivies.body); 
         }) 
       })     
     })
