@@ -1,6 +1,6 @@
 # fakeRestaApi
 
-### ✨ **Instalação do cypress**
+###  **Instalação do cypress**
 -----------------------
 - Instale o [Node.js](https://nodejs.org/en/download/);
 - Baixe este repositório ou faça um git clone;
